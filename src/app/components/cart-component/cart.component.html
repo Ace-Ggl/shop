@@ -1,0 +1,7 @@
+<h3>Cart</h3>
+<div *ngIf="cartService.getProductCount(); else NoProducts">
+  <p *ngFor="let product of cartService.getProducts()">
+    <app-product-component [product]="product"></app-product-component>
+  </p>
+</div>
+<ng-template #NoProducts>The Cart is empty</ng-template>
