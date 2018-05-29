@@ -1,0 +1,4 @@
+<h3>Goods for sale</h3>
+<p *ngFor="let product of productService.getProducts()">
+  <app-product-component [product]="product" [showBuy]="true" (buy)="onBuy($event)"></app-product-component>
+</p>

@@ -4,6 +4,7 @@ export class Product {
     name: string;
     description: string;
     price: number;
+    quantity: number;
     category: Category;
     isAvailable: boolean;
 }

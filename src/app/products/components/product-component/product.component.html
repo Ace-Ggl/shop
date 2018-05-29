@@ -6,4 +6,4 @@
     <div>Category <span>{{product.category.toString()}}</span></div>
     <div>Available <span>{{product.isAvailable}}</span></div>
 </div>
-<button (click)="onBuy()">Buy</button>
+<button *ngIf="product.isAvailable && showBuy" (click)="onBuy()">Buy</button>

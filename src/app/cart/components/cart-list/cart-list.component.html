@@ -1,0 +1,10 @@
+<hr>
+<h3>Shopping Cart</h3>
+<div *ngIf="cartService.getProductCount(); else NoProducts">
+  <div>Purchased Product Count: <span>{{cartService.getProductCount()}}</span></div>
+  <div>Purchased Product Sum: <span>{{cartService.getProductSum()}}</span></div>
+  <p *ngFor="let product of cartService.getProducts()">
+    <app-cart-item-component [product]="product" (del)="onDelete(product)"></app-cart-item-component>
+  </p>
+</div>
+<ng-template #NoProducts>The Cart is empty</ng-template>

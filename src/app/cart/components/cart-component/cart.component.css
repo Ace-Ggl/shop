@@ -1,0 +1,7 @@
+.inactive {
+    background-color: transparent;
+}
+
+.active {
+    background-color: grey;
+}
