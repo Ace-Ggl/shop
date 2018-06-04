@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../../models/product';
-import { ICartService } from '../cart.service.interface';
 
 @Injectable()
-export class CartService implements ICartService {
+export class CartService {
   private static products: Product[] = [];
 
   constructor() { }
@@ -36,7 +35,7 @@ export class CartService implements ICartService {
     const index: number = CartService.products.indexOf(product);
 
     if (index >= 0) {
-      CartService.products.splice(index);
+      CartService.products.splice(index, 1);
     }
   }
 }

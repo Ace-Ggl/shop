@@ -1,9 +1,9 @@
 import { Component, Input, Output, OnInit, EventEmitter, DoCheck } from '@angular/core';
+import { ProductComponent } from '../../../products/components';
 import { Product } from '../../../models/product';
-import { PaintUponLookDirective } from '../../../shared/paint-upon-look/paint-upon-look.directive';
 
 @Component({
-  selector: 'app-cart-item-component',
+  selector: 'app-cart-item',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })

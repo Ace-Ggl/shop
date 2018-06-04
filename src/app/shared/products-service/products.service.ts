@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import { IProductsService } from '../products.interface';
 import { Product } from '../../models/product';
 import { Category } from '../../enums/category.enum';
 
 @Injectable()
-export class ProductsService implements IProductsService {
+export class ProductsService {
   getProducts(): Product[] {
     return [
       { name: 'Audi', description: 'Good Car', category: Category.Cars, isAvailable: true, price: 20000, quantity: 1 },

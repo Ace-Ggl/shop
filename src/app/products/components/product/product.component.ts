@@ -1,9 +1,8 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { Product } from '../../../models/product';
-import { CartService } from '../../../shared';
 
 @Component({
-  selector: 'app-product-component',
+  selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })

@@ -1,5 +1,5 @@
 <div app-paint-upon-look>
-  <app-product-component [product]="product" [showBuy]="false"></app-product-component>
+  <app-product [product]="product" [showBuy]="false"></app-product>
   <label>Quantity <input type="number" [(value)]="product.quantity" (change)="onChange($event)"></label>
   <button (click)="onDelete()">Delete</button>
 </div>
