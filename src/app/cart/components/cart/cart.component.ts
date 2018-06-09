@@ -1,11 +1,12 @@
-import { Component, Input, Output, OnInit, EventEmitter, DoCheck } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { ProductComponent } from '../../../products/components';
 import { Product } from '../../../models/product';
 
 @Component({
   selector: 'app-cart-item',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  styleUrls: ['./cart.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CartComponent implements OnInit {
   @Input() product: Product;
